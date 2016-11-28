@@ -1,0 +1,331 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Typography
+	1.1 - Headings
+	1.2 - Body Copy
+	1.3 - Buttons
+	1.4 - Forms
+	1.5 - Lists
+	1.6 - Tables
+2.0 - Navigation Menus
+	2.1 - Main Menu
+	2.2 - Sub Menu
+	2.3 - Footer Menu
+3.0 - Content
+	3.1 - Site Structure
+	3.2 - Section Name
+	3.3 - Section Name
+4.0 - Media
+5.0 - Utility
+	5.1 - Background Colors
+	5.2 - Text Colors
+	5.3 - Text Sizes
+	5.4 - Alignments
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 - TYPOGRAPHY
+-------------------------------------------------------------- */
+
+/*--------------------------------------------------------------
+1.1 - HEADINGS
+-------------------------------------------------------------- */
+
+h2 {
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	font-size: 2rem;
+}
+
+#products h2 {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+1.2 - BODY COPY
+-------------------------------------------------------------- */
+
+#callout, #products a {
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.5rem;
+	font-weight: 300;
+	text-align: center;
+}
+
+.blend-name {
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.25rem;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+p {
+	font-family: "Courier", monospace;
+}
+
+.secondary-label {
+	font-family: 'Oswald', sans-serif;
+	font-size: 1rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	
+}
+
+img {
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+1.3 - BUTTONS
+-------------------------------------------------------------- */
+
+/*--------------------------------------------------------------
+1.4 - FORMS
+-------------------------------------------------------------- */
+
+/*--------------------------------------------------------------
+1.5 - LISTS
+-------------------------------------------------------------- */
+
+/*--------------------------------------------------------------
+1.6 - TABLES
+-------------------------------------------------------------- */
+
+/*--------------------------------------------------------------
+2.0 - NAVIGATION MENUS
+-------------------------------------------------------------- */
+
+/*--------------------------------------------------------------
+2.1 - MAIN MENU
+-------------------------------------------------------------- */
+
+nav li {
+	display: inline-block;
+}
+
+ul {
+	text-align: right;
+}
+
+a {
+	font-family: "Courier", monospace;
+}
+
+/*--------------------------------------------------------------
+2.2 - SUB MENU
+-------------------------------------------------------------- */
+
+/*--------------------------------------------------------------
+2.3 - FOOTER MENU
+-------------------------------------------------------------- */
+
+/*--------------------------------------------------------------
+3.0 - CONTENT
+-------------------------------------------------------------- */
+
+/*--------------------------------------------------------------
+3.1 - SITE STRUCTURE
+-------------------------------------------------------------- */
+
+*, *:after, *:before {
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.row:after {
+	content: ""; /* You have to this for any pseudo element before/after */
+	display: table;
+	clear: both;
+}
+
+[class*='col-'] { /* Targets any class that beings with col- */
+	float: left;
+	padding-right: 20px; /* Use pixels because we never want the gutter to change size */
+	margin-bottom: 20px;
+	background-color: #b7b7b7; /*Delete this*/
+}
+
+[class*='col-']:last-of-type {
+	padding-right: 0;
+}
+
+.wrapper {
+	width: 65%; /* Get your original percentage as close to 1024px as possible */
+	margin: 0 auto;
+}
+
+.block-center {
+	float: none;
+	margin: 0 auto;
+}
+
+/*--------------------------------------------------------------
+3.2 - SITE HEADER
+-------------------------------------------------------------- */
+
+/*--------------------------------------------------------------
+3.3 - SITE FOOTER
+-------------------------------------------------------------- */
+
+/*--------------------------------------------------------------
+4.0 - MEDIA
+-------------------------------------------------------------- */
+
+#hero {
+  	background: url(../img/hero-img.jpg) no-repeat center center;
+  	-moz-background-size: cover;
+  	-ms-background-size: cover;
+  	-o-background-size: cover;
+  	-webkit-background-size: cover;
+  	background-size: cover;
+  	padding: 45px 0 410px;
+}
+
+/*--------------------------------------------------------------
+5.0 - UTILITY
+-------------------------------------------------------------- */
+
+/*--------------------------------------------------------------
+5.1 - TEXT SIZES
+-------------------------------------------------------------- */
+
+/*--------------------------------------------------------------
+5.2 - COLORS
+-------------------------------------------------------------- */
+
+/*--------------------------------------------------------------
+5.3 - ALIGNMENTS
+-------------------------------------------------------------- */
+
+.f-left {
+	float: left;
+}
+
+
+.f-right {
+	float: right;
+}
+
+/*--------------------------------------------------------------
+6.0 - COLUMN WIDTHS
+-------------------------------------------------------------- */
+
+/* ~~~ ONE COLUMN ~~~ */
+
+.col-1-1 {
+	width: 100%;
+}
+
+/* ~~~ TWO COLUMNS ~~~ */
+
+.col-1-2 {
+	width: 50%;
+}
+
+/* ~~~ THREE COLUMNS ~~~ */
+
+.col-1-3 {
+	width: 33.33%
+}
+
+.col-2-3 {
+	width: 66.671%
+}
+
+/* ~~~ FOUR COLUMNS ~~~ */
+
+.col-1-4 {
+	width: 25%;
+}
+
+.col-3-4 {
+	width: 75%;
+}
+
+/* ~~~ FIVE COLUMNS ~~~ */
+
+.col-1-5 {
+	width: 20%;
+}
+
+.col-4-5 {
+	width: 80%;
+}
+
+/* ~~~ SIX COLUMNS ~~~ */
+
+.col-1-6 {
+	width: 16.66%;
+}
+
+.col-5-6 {
+	width: 83.34%;
+}
+
+/* ~~~ SEVEN COLUMNS ~~~ */
+
+.col-1-7 {
+	width: 14.285%;
+}
+
+.col-6-7 {
+	width: 85.715%;
+}
+
+/* ~~~ EIGHT COLUMNS ~~~ */
+
+.col-1-8 {
+	width: 12.5%;
+}
+
+.col-7-8 {
+	width: 87.5%;
+}
+
+/* ~~~ NINE COLUMNS ~~~ */
+
+.col-1-9 {
+	width: 11.11%;
+}
+
+.col-8-9 {
+	width: 88.89%;
+}
+
+/* ~~~ TEN COLUMNS ~~~ */
+
+.col-1-10 {
+	width: 10%;
+}
+
+.col-9-10 {
+	width: 90%;
+}
+
+
+/* ~~~ ELEVEN COLUMNS ~~~ */
+
+.col-1-11 {
+	width: 9.09%;
+}
+
+.col-10-11 {
+	width: 90.91%;
+}
+
+/* ~~~ TWELVE COLUMNS ~~~ */
+
+.col-1-12 {
+	width: 8.33%;
+}
+
+.col-11-12 {
+	width: 91.67%;
+}
