@@ -36,13 +36,12 @@
 -------------------------------------------------------------- */
 
 h2 {
-	font-family: 'Oswald', sans-serif;
-	text-transform: uppercase;
-	font-size: 2rem;
+  font: 2rem 'Oswald', sans-serif;
+  text-transform: uppercase;
 }
 
 #products h2 {
-	text-align: center;
+  text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -50,33 +49,36 @@ h2 {
 -------------------------------------------------------------- */
 
 #callout, #products a {
-	font-family: 'Oswald', sans-serif;
-	font-size: 1.5rem;
-	font-weight: 300;
-	text-align: center;
+  font: 300 1.5rem 'Oswald', sans-serif;
+  text-align: center;
 }
 
 .blend-name {
-	font-family: 'Oswald', sans-serif;
-	font-size: 1.25rem;
-	font-weight: 700;
-	text-transform: uppercase;
+  font: 700 1.25rem 'Oswald', sans-serif;
+  text-transform: uppercase;
 }
 
 p {
-	font-family: "Courier", monospace;
+  font-family: "Courier", monospace;
 }
 
 .secondary-label {
-	font-family: 'Oswald', sans-serif;
-	font-size: 1rem;
-	font-weight: 300;
-	text-transform: uppercase;
-	
+  font: 300 1rem 'Oswald', sans-serif;
+  text-transform: uppercase;
 }
 
-img {
-	width: 100%;
+#hero-quote {
+  font: 400 2.5rem/4rem 'Oswald', sans-serif;
+  text-transform: uppercase;
+  text-align: left;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+#author {
+  font: 300 1rem 'Oswald', sans-serif;
+  text-align: left;
+  color: #fff;
 }
 
 /*--------------------------------------------------------------
@@ -131,6 +133,14 @@ ul {
 
 a {
 	font-family: "Courier", monospace;
+}
+
+#fixed-nav {
+	position: fixed;
+	top: 0;
+	left: 17.5%;
+	width: 65%;
+	background-color: #d7d7d7;
 }
 
 /*--------------------------------------------------------------
@@ -196,6 +206,10 @@ a {
 4.0 - MEDIA
 -------------------------------------------------------------- */
 
+img {
+	width: 100%;
+}
+
 #hero {
   	background: url(../img/hero-img.jpg) no-repeat center center;
   	-moz-background-size: cover;
@@ -203,7 +217,7 @@ a {
   	-o-background-size: cover;
   	-webkit-background-size: cover;
   	background-size: cover;
-  	padding: 45px 0 410px;
+  	padding: 45px 0 200px;
 }
 
 #map {
@@ -245,7 +259,6 @@ footer img {
 .f-left {
 	float: left;
 }
-
 
 .f-right {
 	float: right;
@@ -366,4 +379,45 @@ footer img {
 
 .col-11-12 {
 	width: 91.67%;
+}
+
+
+@media (max-width: 480px) {
+	
+/*--------------------------------------------------------------
+2.1 - MAIN MENU
+-------------------------------------------------------------- */
+
+ul {
+	text-align: center;
+}
+	
+/*--------------------------------------------------------------
+3.1 - SITE STRUCTURE
+-------------------------------------------------------------- */
+	
+.wrapper {
+	width: 85%;
+}
+
+.col-1-2 {
+	width: 100%;
+}
+
+.col-1-3 {
+	width: 100%;
+}
+
+.col-1-4 {
+	width: 50%;
+}
+	
+.col-1-5 {
+	width: 100%;
+}
+
+.col-2-3 {
+	width: 100%;
+}
+
 }
