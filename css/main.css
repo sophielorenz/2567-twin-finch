@@ -44,6 +44,11 @@ h2 {
   text-align: center;
 }
 
+h3 {
+  font: 700 1.25rem 'Oswald', sans-serif;
+  text-transform: uppercase;
+}
+
 /*--------------------------------------------------------------
 1.2 - BODY COPY
 -------------------------------------------------------------- */
@@ -51,11 +56,6 @@ h2 {
 #callout, #products a {
   font: 300 1.5rem 'Oswald', sans-serif;
   text-align: center;
-}
-
-.blend-name {
-  font: 700 1.25rem 'Oswald', sans-serif;
-  text-transform: uppercase;
 }
 
 p {
@@ -67,18 +67,25 @@ p {
   text-transform: uppercase;
 }
 
-#hero-quote {
-  font: 400 2.5rem/4rem 'Oswald', sans-serif;
+blockquote {
+	margin: 0;
+	padding: 0;
+}
+
+blockquote p:first-child {
+  font: 400 3.35rem/4.1rem 'Oswald', sans-serif;
   text-transform: uppercase;
   text-align: left;
   color: #fff;
   letter-spacing: 1px;
+  margin: 0;
 }
 
-#author {
+blockquote p:nth-child(2) {
   font: 300 1rem 'Oswald', sans-serif;
   text-align: left;
   color: #fff;
+  margin: 0;
 }
 
 /*--------------------------------------------------------------
@@ -125,14 +132,39 @@ form a {
 
 nav li {
 	display: inline-block;
+	background: url(../img/btn-default.svg) no-repeat center;
+	background-size: cover;
+	padding: 19px 3px;
+	margin-right: 20px;
+}
+
+nav li:hover {
+    background: url(../img/btn-hover.svg) no-repeat center;
+	background-size: cover;
+	padding: 19px 3px;
+	margin-right: 20px;
+}
+
+nav li {
+	margin-right: 50px;
+}
+
+nav li:last-child a {
+	margin-right: 0;
 }
 
 ul {
 	text-align: right;
 }
 
-a {
+header nav a {
 	font-family: "Courier", monospace;
+	color: #000;
+	font-size: 1rem;
+	text-decoration: none;
+	border: 1px solid #000;
+	border-radius: 2rem;
+	padding: 6px 21px;
 }
 
 #fixed-nav {
@@ -140,7 +172,6 @@ a {
 	top: 0;
 	left: 17.5%;
 	width: 65%;
-	background-color: #d7d7d7;
 }
 
 /*--------------------------------------------------------------
@@ -177,7 +208,6 @@ a {
 	float: left;
 	padding-right: 20px; /* Use pixels because we never want the gutter to change size */
 	margin-bottom: 20px;
-	background-color: #b7b7b7; /*Delete this*/
 }
 
 [class*='col-']:last-of-type {
@@ -193,6 +223,10 @@ a {
 	float: none;
 	margin: 0 auto;
 }
+
+#hero .wrapper {
+	width: 100%;
+}/* Ask about this */
 
 /*--------------------------------------------------------------
 3.2 - SITE HEADER
@@ -210,14 +244,14 @@ img {
 	width: 100%;
 }
 
-#hero {
-  	background: url(../img/hero-img.jpg) no-repeat center center;
+#hero-img {
+  	background: url(../img/hero-img.svg) 50% 100%/100% no-repeat;
   	-moz-background-size: cover;
   	-ms-background-size: cover;
   	-o-background-size: cover;
   	-webkit-background-size: cover;
   	background-size: cover;
-  	padding: 45px 0 200px;
+  	padding: 15rem;
 }
 
 #map {
@@ -245,11 +279,11 @@ footer img {
 -------------------------------------------------------------- */
 
 .bg-dark-yellow {
-	background-color: #696969;
+	background-color: #fecc2f;
 }
 
 .bg-light-yellow {
-	background-color: #d7d7d7;
+	background-color: #feebae;
 }
 
 /*--------------------------------------------------------------
@@ -384,6 +418,21 @@ footer img {
 
 @media (max-width: 480px) {
 	
+	
+blockquote p:first-child {
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: left;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+blockquote p:nth-child(2) {
+  font: 300 1rem 'Oswald', sans-serif;
+  text-align: left;
+  color: #fff;
+}
+	
 /*--------------------------------------------------------------
 2.1 - MAIN MENU
 -------------------------------------------------------------- */
@@ -391,6 +440,11 @@ footer img {
 ul {
 	text-align: center;
 }
+
+#fixed-nav {
+	position: static;
+	width: 100%;
+}/* Why is this still sticking to the top?*/
 	
 /*--------------------------------------------------------------
 3.1 - SITE STRUCTURE
@@ -419,5 +473,10 @@ ul {
 .col-2-3 {
 	width: 100%;
 }
+
+#hero-img {
+	padding: 0;
+}
+
 
 }
