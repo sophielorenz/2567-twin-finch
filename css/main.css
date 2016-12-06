@@ -28,6 +28,34 @@
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
+UNSURE WHERE THESE GO WITHIN THE TABLE OF CONENTS....MAYBE UTILITY?
+-------------------------------------------------------------- */
+
+h2, h3, .secondary-label, blockquote p:first-child  {
+	text-transform: uppercase;
+}
+
+#products h2, #callout, #products a, ul {
+	text-align: center;
+}
+
+blockquote p:first-child, blockquote p:nth-child(2), blockquote a {
+	color: #fff;
+}
+
+header nav a, #callout a, #callout a:hover {
+	color: #000;
+}
+
+input, form a, nav li, footer p {
+	display: inline-block;
+}
+
+h1, blockquote, blockquote p:first-child, blockquote p:nth-child(2) {
+	margin: 0;
+}
+
+/*--------------------------------------------------------------
 1.0 - TYPOGRAPHY
 -------------------------------------------------------------- */
 
@@ -36,17 +64,11 @@
 -------------------------------------------------------------- */
 
 h2 {
-  font: 2rem 'Oswald', sans-serif;
-  text-transform: uppercase;
-}
-
-#products h2 {
-  text-align: center;
+	font: 2rem 'Oswald', sans-serif;
 }
 
 h3 {
-  font: 700 1.25rem 'Oswald', sans-serif;
-  text-transform: uppercase;
+	font: 700 1.25rem 'Oswald', sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -54,43 +76,47 @@ h3 {
 -------------------------------------------------------------- */
 
 #callout, #products a {
-  font: 300 1.5rem 'Oswald', sans-serif;
-  text-align: center;
+	font: 300 1.5rem 'Oswald', sans-serif;
 }
 
 p {
-  font-family: "Courier", monospace;
+	font-family: "Courier", monospace;
 }
 
 .secondary-label {
-  font: 300 1rem 'Oswald', sans-serif;
-  text-transform: uppercase;
+	font: 300 1rem 'Oswald', sans-serif;
 }
 
 blockquote {
-	margin: 0;
 	padding: 0;
 }
 
 blockquote p:first-child {
-  font: 400 3.35rem/4.1rem 'Oswald', sans-serif;
-  text-transform: uppercase;
-  text-align: left;
-  color: #fff;
-  letter-spacing: 1px;
-  margin: 0;
+	font: 400 3.35rem/4.1rem 'Oswald', sans-serif;
+	letter-spacing: 1px;
 }
 
 blockquote p:nth-child(2) {
-  font: 300 1rem 'Oswald', sans-serif;
-  text-align: left;
-  color: #fff;
-  margin: 0;
+	font: 300 1rem 'Oswald', sans-serif;
+}
+
+span {
+	font: 300 0.90rem 'Oswald', sans-serif;
+	text-transform: lowercase;
 }
 
 /*--------------------------------------------------------------
 1.3 - BUTTONS
 -------------------------------------------------------------- */
+
+blockquote a {
+	font: 300 1rem 'Oswald', sans-serif;
+	text-decoration: none;
+}
+
+#callout a:hover {
+	font-weight: 700;
+}
 
 /*--------------------------------------------------------------
 1.4 - FORMS
@@ -101,7 +127,6 @@ label {
 }
 
 input {
-	display: inline-block;
 	width: 100%;
 }
 
@@ -109,14 +134,13 @@ input {
 	display: block;
 }
 
-form a {
-	display: inline-block;
-}/* Does this go here? */
-
-
 /*--------------------------------------------------------------
 1.5 - LISTS
 -------------------------------------------------------------- */
+
+ul {
+	text-align: right;
+}
 
 /*--------------------------------------------------------------
 1.6 - TABLES
@@ -131,7 +155,6 @@ form a {
 -------------------------------------------------------------- */
 
 nav li {
-	display: inline-block;
 	background: url(../img/btn-default.svg) no-repeat center;
 	background-size: cover;
 	padding: 19px 3px;
@@ -139,7 +162,7 @@ nav li {
 }
 
 nav li:hover {
-    background: url(../img/btn-hover.svg) no-repeat center;
+	background: url(../img/btn-hover.svg) no-repeat center;
 	background-size: cover;
 	padding: 19px 3px;
 	margin-right: 20px;
@@ -153,13 +176,8 @@ nav li:last-child a {
 	margin-right: 0;
 }
 
-ul {
-	text-align: right;
-}
-
 header nav a {
 	font-family: "Courier", monospace;
-	color: #000;
 	font-size: 1rem;
 	text-decoration: none;
 	border: 1px solid #000;
@@ -219,14 +237,14 @@ header nav a {
 	margin: 0 auto;
 }
 
-.block-center {
+  .block-center {
 	float: none;
 	margin: 0 auto;
 }
 
 #hero .wrapper {
 	width: 100%;
-}/* Ask about this */
+}
 
 /*--------------------------------------------------------------
 3.2 - SITE HEADER
@@ -245,13 +263,13 @@ img {
 }
 
 #hero-img {
-  	background: url(../img/hero-img.svg) 50% 100%/100% no-repeat;
-  	-moz-background-size: cover;
-  	-ms-background-size: cover;
-  	-o-background-size: cover;
-  	-webkit-background-size: cover;
-  	background-size: cover;
-  	padding: 15rem;
+	background: url(../img/hero-img.svg) 50% 100%/100% no-repeat;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+	background-size: cover;
+	padding: 15rem;
 }
 
 #map {
@@ -265,10 +283,6 @@ img {
 /*--------------------------------------------------------------
 5.1 - TEXT SIZES
 -------------------------------------------------------------- */
-
-footer p {
-	display: inline-block;
-}
 
 footer img {
 	width: inherit;
@@ -289,10 +303,6 @@ footer img {
 /*--------------------------------------------------------------
 5.3 - ALIGNMENTS
 -------------------------------------------------------------- */
-
-.f-left {
-	float: left;
-}
 
 .f-right {
 	float: right;
@@ -418,33 +428,41 @@ footer img {
 
 @media (max-width: 480px) {
 	
+/*--------------------------------------------------------------
+1.1 - HEADINGS
+-------------------------------------------------------------- */
+
+h2 {
+	font-size: 3rem;
+}
+
+/*--------------------------------------------------------------
+1.2 - BODY COPY
+-------------------------------------------------------------- */
 	
 blockquote p:first-child {
-  font-size: 1rem;
-  text-transform: uppercase;
-  text-align: left;
-  color: #fff;
-  letter-spacing: 1px;
+	font: 400 1.75rem/2.75rem 'Oswald', sans-serif;
+	letter-spacing: 1px;
+	padding: 0.75rem;
+	margin-bottom: 2rem;
 }
 
 blockquote p:nth-child(2) {
-  font: 300 1rem 'Oswald', sans-serif;
-  text-align: left;
-  color: #fff;
+	font: 300 1rem 'Oswald', sans-serif;
+}
+
+#callout, #callout a {
+	font-size: 1.85rem;
 }
 	
 /*--------------------------------------------------------------
 2.1 - MAIN MENU
 -------------------------------------------------------------- */
 
-ul {
-	text-align: center;
-}
-
 #fixed-nav {
 	position: static;
 	width: 100%;
-}/* Why is this still sticking to the top?*/
+}
 	
 /*--------------------------------------------------------------
 3.1 - SITE STRUCTURE
@@ -458,6 +476,10 @@ ul {
 	width: 100%;
 }
 
+.blend-details {
+	width: 50%;
+}
+
 .col-1-3 {
 	width: 100%;
 }
@@ -467,7 +489,27 @@ ul {
 }
 	
 .col-1-5 {
-	width: 100%;
+	width: 33.33%;
+	float: none;
+	margin: 0 auto;
+}
+
+nav {
+	float: none;
+	margin: 0 auto;
+}
+
+ul {
+	text-align: center;
+}
+
+.col-1-5 img {
+	display: inline-block;
+	padding: 2rem 0;
+}
+
+.col-1-6 {
+	width: 50%;
 }
 
 .col-2-3 {
@@ -475,7 +517,19 @@ ul {
 }
 
 #hero-img {
-	padding: 0;
+	padding: 1rem 0 10rem;
+}
+
+/*--------------------------------------------------------------
+4.0 - MEDIA
+-------------------------------------------------------------- */
+
+img {
+	max-width: 100%;
+}
+
+figure {
+	display: none;
 }
 
 
