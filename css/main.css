@@ -17,8 +17,8 @@
 	2.3 - Footer Menu
 3.0 - Content
 	3.1 - Site Structure
-	3.2 - Section Name
-	3.3 - Section Name
+	3.2 - Site Header
+	3.3 - Site Footer
 4.0 - Media
 5.0 - Utility
 	5.1 - Background Colors
@@ -26,10 +26,6 @@
 	5.3 - Text Sizes
 	5.4 - Alignments
 --------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-UNSURE WHERE THESE GO WITHIN THE TABLE OF CONENTS....MAYBE UTILITY?
--------------------------------------------------------------- */
 
 h2, h3, .secondary-label, blockquote p:first-child  {
 	text-transform: uppercase;
@@ -43,7 +39,7 @@ blockquote p:first-child, blockquote p:nth-child(2), blockquote a {
 	color: #fff;
 }
 
-header nav a, #callout a, #callout a:hover {
+header nav a, #callout a, #callout a:hover, #products a, #products a:hover, #about a {
 	color: #000;
 }
 
@@ -105,6 +101,10 @@ span {
 	text-transform: lowercase;
 }
 
+#mission-statement {
+	font: 700 1.35rem/1.25 'Courier', monospace;
+}
+
 /*--------------------------------------------------------------
 1.3 - BUTTONS
 -------------------------------------------------------------- */
@@ -114,9 +114,10 @@ blockquote a {
 	text-decoration: none;
 }
 
-#callout a:hover {
+#callout a:hover, #about a:hover {
 	font-weight: 700;
 }
+
 
 /*--------------------------------------------------------------
 1.4 - FORMS
@@ -134,12 +135,31 @@ input {
 	display: block;
 }
 
+::-webkit-input-placeholder {
+  color: #000;
+  font: 300 1rem 'Oswald', sans-serif;
+}
+
+::-moz-placeholder {
+  color: #000;
+}
+
+:-ms-input-placeholder {
+  color: #000;
+}
+
+:-moz-placeholder {
+  color: #000;
+}
+
 /*--------------------------------------------------------------
 1.5 - LISTS
 -------------------------------------------------------------- */
 
 ul {
 	text-align: right;
+	padding: 0;
+	margin-top: 2rem;
 }
 
 /*--------------------------------------------------------------
@@ -155,41 +175,43 @@ ul {
 -------------------------------------------------------------- */
 
 nav li {
-	background: url(../img/btn-default.svg) no-repeat center;
-	background-size: cover;
-	padding: 19px 3px;
-	margin-right: 20px;
+	background: url(../img/btn.png) no-repeat center;
+	-moz-background-size: contain;
+	-ms-background-size: contain;
+	-o-background-size: contain;
+	-webkit-background-size: contain;
+	background-size: contain;
+	background-position: 0 0;
+	display: inline-block;
+	text-align: center;
+	padding: 0 13px;
+	width: 145px;
+	height: 70px;
 }
 
 nav li:hover {
-	background: url(../img/btn-hover.svg) no-repeat center;
-	background-size: cover;
-	padding: 19px 3px;
-	margin-right: 20px;
-}
-
-nav li {
-	margin-right: 50px;
-}
-
-nav li:last-child a {
-	margin-right: 0;
+	background: url(../img/btn.png) no-repeat center;
+	-moz-background-size: contain;
+	-ms-background-size: contain;
+	-o-background-size: contain;
+	-webkit-background-size: contain;
+	background-size: contain;
+	background-position: 0 -70px;
 }
 
 header nav a {
-	font-family: "Courier", monospace;
-	font-size: 1rem;
-	text-decoration: none;
-	border: 1px solid #000;
-	border-radius: 2rem;
-	padding: 6px 21px;
+  font: 1rem "Courier", monospace;
+  text-decoration: none;
+  border: 1px solid #000;
+  border-radius: 0.75rem;
+  padding: 6px 21px;
 }
 
 #fixed-nav {
-	position: fixed;
-	top: 0;
-	left: 17.5%;
-	width: 65%;
+  position: fixed;
+  top: 0;
+  left: 17.5%;
+  width: 65%;
 }
 
 /*--------------------------------------------------------------
@@ -433,8 +455,18 @@ footer img {
 -------------------------------------------------------------- */
 
 h2 {
-	font-size: 3rem;
+	font-size: 2.85rem;
+	text-align: center;
 }
+
+ #about h2 {
+	 text-align: center;
+	 line-height: 4rem;
+ }
+ 
+ #our-location p {
+	 text-align: center;
+ }
 
 /*--------------------------------------------------------------
 1.2 - BODY COPY
@@ -454,6 +486,20 @@ blockquote p:nth-child(2) {
 #callout, #callout a {
 	font-size: 1.85rem;
 }
+
+.secondary-label {
+	font-size: 1.25rem;
+}
+
+#about p {
+	text-align: center;
+}
+
+#mission-statement {
+	font-size: 1.17rem;
+}
+
+
 	
 /*--------------------------------------------------------------
 2.1 - MAIN MENU
