@@ -27,33 +27,41 @@
 	5.4 - Alignments
 --------------------------------------------------------------*/
 
+/*--------------------------------------------------------------
+1.0 - TYPOGRAPHY
+-------------------------------------------------------------- */
+
+#products h2, #callout, #products a, #subscribe a, #contact a, ul, nav li, blockquote a, form p, #contact form p {
+	text-align: center;
+}
+
+nav a, footer nav a, #products a.product-button, #subscribe a, #contact a, .yellow-btn .black-btn, blockquote a {
+	text-decoration: none;
+}
+
 h2, h3, .secondary-label, blockquote p:first-child  {
 	text-transform: uppercase;
 }
 
-#products h2, #callout, #products a, ul, nav li {
-	text-align: center;
-}
-
-blockquote p:first-child, blockquote p:nth-child(2), blockquote a, #contact a:hover {
+blockquote p:first-child, blockquote p:nth-child(2), blockquote a, #contact a:hover, #subscribe a:hover {
 	color: #fff;
 }
 
-header nav a, #callout a, #callout a:hover, #products a, #products a:hover, #about a, #contact a {
+header nav a, nav a, #products a.product-button, #callout a, #callout a:hover, #products a, #products a:hover, #about a, #contact a, #subscribe a, footer nav a {
 	color: #000;
 }
 
-input, form a, nav li, footer p {
+.yellow-btn, nav a, #products a.product-button, #subscribe a, #contact a, input, form a, nav li, footer li, footer p, footer nav a, form p {
 	display: inline-block;
+}
+
+blockquote, ul {
+	padding: 0;
 }
 
 h1, blockquote, blockquote p:first-child, blockquote p:nth-child(2), #subscribe p {
 	margin: 0;
 }
-
-/*--------------------------------------------------------------
-1.0 - TYPOGRAPHY
--------------------------------------------------------------- */
 
 /*--------------------------------------------------------------
 1.1 - HEADINGS
@@ -64,16 +72,12 @@ h2 {
 }
 
 h3 {
-	font: 700 1.25rem 'Oswald', sans-serif;
+	font: 700 1.10rem 'Oswald', sans-serif;
 }
 
 /*--------------------------------------------------------------
 1.2 - BODY COPY
 -------------------------------------------------------------- */
-
-#callout, #callout-link {
-	font: 300 1.5rem 'Oswald', sans-serif;
-}
 
 p {
 	font-family: "Courier", monospace;
@@ -81,10 +85,6 @@ p {
 
 .secondary-label {
 	font: 300 1rem 'Oswald', sans-serif;
-}
-
-blockquote {
-	padding: 0;
 }
 
 blockquote p:first-child {
@@ -101,35 +101,52 @@ span {
 	text-transform: lowercase;
 }
 
+#footnote {
+	font-size: 1rem;
+	font-style: italic;
+}
+
 #mission-statement {
 	font: 700 1.35rem/1.25 'Courier', monospace;
 }
 
-
+footer p {
+	font-size: 0.5rem;
+}
 
 /*--------------------------------------------------------------
 1.3 - BUTTONS
 -------------------------------------------------------------- */
 
-nav a, footer nav a {
-  font: 1rem "Courier", monospace;
-  display: inline-block;
-  margin-top: 5px;
-  text-decoration: none;
-  border: 1px solid #000;
-  border-radius: 0.75rem;
-  padding: 1px 13px;
+nav a, footer nav a, #products a.product-button, #subscribe a, #contact a {
+	font: 0.85rem "Courier", monospace;
+	border: 1px solid #000;
+	-moz-border-radius: 0.75rem;
+	-ms-border-radius: 0.75rem;
+	-o-border-radius: 0.75rem;
+	-webkit-border-radius: 0.75rem;
+	border-radius: 0.75rem;
+	min-width: 100px;
+	min-height: 22px;
+	margin-top: 5px;
 }
 
 blockquote a {
 	font: 300 1rem 'Oswald', sans-serif;
-	text-decoration: none;
 }
 
 blockquote a:hover {
 	color: #feebae;
 }
 
+#callout, #callout-link {
+	font: 300 1.5rem 'Oswald', sans-serif;
+	margin-top: 7rem;
+}
+
+#callout-link:hover {
+	font: 700 1.5rem 'Oswald', sans-serif;
+}
 
 #callout a:hover, #about a:hover {
 	font-weight: 700;
@@ -137,76 +154,59 @@ blockquote a:hover {
 
 .yellow-btn {
 	background: url(../img/btn.png) no-repeat center;
-	-moz-background-size: contain;
-	-ms-background-size: contain;
-	-o-background-size: contain;
-	-webkit-background-size: contain;
-	background-size: cover;
 	background-position: 0 0;
-	display: inline-block;
-	text-decoration: none;
 	padding: 0 13px;
-	width: 120px;
-	height: 28px;
+	min-width: 128px;
+	min-height: 31px;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 .yellow-btn:hover {
-	background-position: 0 -28px;
-}
-
-#contact a {
-  font: 1rem "Courier", monospace;
-  display: inline-block;
-  margin-top: 1px;
-  text-decoration: none;
-  padding: 6px 21px;
+	background-position: 0 -31px;
 }
 
 .black-btn {
 	background: url(../img/btn-bw.png) no-repeat center;
-	-moz-background-size: contain;
-	-ms-background-size: contain;
-	-o-background-size: contain;
-	-webkit-background-size: contain;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
 	background-size: cover;
 	background-position: 0 0;
 	display: inline-block;
-	text-decoration: none;
 	padding: 0 13px;
-	width: 145px;
-	height: 35px;
+	min-width: 128px;
+	min-height: 31px;
 }
 
 .black-btn:hover {
-	background-position: 0 -35px;
+	background-position: 0 -31px;
 }
 
-.sprite li:first-child a {
-	background: url(../img/twitter-icon.png) no-repeat;
+.sprite li a {
 	display: block;
 	background-position: 0 0;
-	height: 75px;
-	width: 80px;
+	height: 50px;
+	width: 54px;
+}
+
+.sprite li:first-child a{
+	background: url(../img/twitter-icon.png) no-repeat;
 }
 
 .sprite li:nth-child(2) a {
 	background: url(../img/facebook-icon.png) no-repeat;
-	display: block;
-	background-position: 0 0;
-	height: 75px;
-	width: 80px;
 }
 
 .sprite li:last-child a {
-	background: url(../img/google-icon.png) no-repeat;
-	display: block;
-	background-position: 0 0;
-	height: 75px;
-	width: 80px;
+	background: url(../img/google-plus-icon.png) no-repeat;
 }
 
 .sprite li a:hover {
-	background-position: 0 -75px;
+	background-position: 0 -49px;
 }
 
 /*--------------------------------------------------------------
@@ -224,9 +224,9 @@ input {
 	-o-border-radius: 0.25rem;
 	-webkit-border-radius: 0.25rem;
 	border-radius: 0.25rem;
-	margin-bottom: 15px;
+	margin-bottom: 60px;
 	padding: 12px 20px;
-	width: 100%;
+	width: 65%;
 }
 
 .bg-dark-yellow input {
@@ -258,10 +258,10 @@ textarea {
   -o-border-radius: 0.25rem;
   -webkit-border-radius: 0.25rem;
   border-radius: 0.25rem;
-  height: 310px;
+  height: 150px;
   width: 100%;
+  padding: 12px 20px;
 }
-
 
 /*--------------------------------------------------------------
 1.5 - LISTS
@@ -269,12 +269,7 @@ textarea {
 
 ul {
 	text-align: right;
-	padding: 0;
 	margin-top: 2rem;
-}
-
-footer li {
-	display: inline-block;
 }
 
 /*--------------------------------------------------------------
@@ -288,13 +283,6 @@ footer li {
 /*--------------------------------------------------------------
 2.1 - MAIN MENU
 -------------------------------------------------------------- */
-
-#fixed-nav {
-  position: fixed;
-  top: 0;
-  left: 17.5%;
-  width: 65%;
-}
 
 /*--------------------------------------------------------------
 2.2 - SUB MENU
@@ -340,18 +328,34 @@ footer li {
 	padding-right: 0;
 }
 
+.col-1-9 {
+	margin-top: 1.75rem;
+}
+
+.col-1-4:last-child {
+	padding-right: 20px;
+}
+
 .wrapper {
 	width: 65%; /* Get your original percentage as close to 1024px as possible */
 	margin: 0 auto;
 }
 
-  .block-center {
+.block-center {
 	float: none;
 	margin: 0 auto;
 }
 
 #hero .wrapper {
 	width: 100%;
+}
+
+#contact, footer {
+	padding: 3rem 0;
+}
+
+.bg-dark-yellow, .bg-light-yellow, #products, #subscribe, #our-location {
+	padding: 5rem 0;
 }
 
 /*--------------------------------------------------------------
@@ -382,6 +386,12 @@ img {
 
 #map {
 	height: 200px;
+	margin-top: 35px;
+	border: 1px solid #000;
+}
+
+footer img {
+	width: inherit;
 }
 
 /*--------------------------------------------------------------
@@ -391,10 +401,6 @@ img {
 /*--------------------------------------------------------------
 5.1 - TEXT SIZES
 -------------------------------------------------------------- */
-
-footer img {
-	width: inherit;
-}
 
 /*--------------------------------------------------------------
 5.2 - COLORS
@@ -533,20 +539,27 @@ footer img {
 	width: 91.67%;
 }
 
+/*-------------------------------------------------------------------------------------------------------------------------
+1024px BREAK POINT
+--------------------------------------------------------------------------------------------------------------------------- */
 
 
 @media (min-width: 1024px) {
 	
 #navbar-default {
-  background-color: transparent;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2;
+	background-color: transparent;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 2;
 }
 	
 }
+
+/*-------------------------------------------------------------------------------------------------------------------------
+480px BREAK POINT
+--------------------------------------------------------------------------------------------------------------------------- */
 
 @media (max-width: 480px) {
 	
@@ -555,14 +568,15 @@ footer img {
 -------------------------------------------------------------- */
 
 h2 {
-	font-size: 2.85rem;
+	font-size: 2.60rem;
+	margin: 1rem;
 }
 
  #about h2 {
 	 line-height: 4rem;
  }
  
- h2, #about h2, #about p, #our-location p {
+ h2, #about h2, #about p, #our-location p, ul, .col-1-8 {
 	 text-align: center;
  }
 
@@ -571,8 +585,7 @@ h2 {
 -------------------------------------------------------------- */
 	
 blockquote p:first-child {
-	font: 400 1.75rem/2.75rem 'Oswald', sans-serif;
-	letter-spacing: 1px;
+	font: 400 1.55rem/2.35rem 'Oswald', sans-serif;
 	padding: 0.75rem;
 	margin-bottom: 2rem;
 }
@@ -591,6 +604,21 @@ blockquote p:nth-child(2) {
 
 #mission-statement {
 	font-size: 1.17rem;
+}
+
+/*--------------------------------------------------------------
+1.4 - FORMS
+-------------------------------------------------------------- */
+
+input {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+textarea {
+  height: 150px;
+  width: 100%;
+  padding: 12px 20px;
 }
 	
 /*--------------------------------------------------------------
@@ -614,29 +642,29 @@ blockquote p:nth-child(2) {
 	width: 85%;
 }
 
-.col-1-2, .col-1-3 {
+.col-1-2, .col-1-3, .col-2-3 {
 	width: 100%;
 }
 
-.blend-details, .col-1-4, .col-1-6  {
+.blend-details, .col-1-4, .col-1-6, .col-1-8  {
 	width: 50%;
 }
 
 .col-1-5 {
-	width: 33.33%;
+	width: 20%;
 	float: none;
+}
+
+.col-1-9 {
+	width: 25%;
 }
 
 nav {
 	float: none;
 }
 
-nav, .col-1-5 {
+nav, .col-1-5, .col-1-8 {
 	margin: 0 auto;
-}
-
-ul {
-	text-align: center;
 }
 
 .col-1-5 img {
@@ -644,12 +672,21 @@ ul {
 	padding: 2rem 0;
 }
 
-.col-2-3 {
+.col-4-5 {
 	width: 100%;
 }
 
 #hero-img {
 	padding: 1rem 0 10rem;
+}
+
+.col-1-9 {
+	float: none;
+	margin: 1rem auto;
+}
+
+#products .row:nth-of-type(2) header:nth-of-type(2) p {
+	margin: 0;
 }
 
 /*--------------------------------------------------------------
