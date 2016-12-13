@@ -18,15 +18,23 @@
 6.0 - Column Widths
 --------------------------------------------------------------*/
 
+
+
+/* My buttons for the products are super fucked up, I know. Sorry. I also have spacing issues everywhere!!! */
+
+
+
 /*--------------------------------------------------------------
 1.0 - TYPOGRAPHY
 -------------------------------------------------------------- */
 
-#products h2, #callout, #products a, #subscribe a, #contact a, ul, nav li, blockquote a, form p, #contact form p {
+#products h2, #callout, #products a, #subscribe a, #contact a, ul,
+ nav li, blockquote a, form p, #contact form p {
 	text-align: center;
 }
 
-nav a, footer nav a, #products a.product-button, #subscribe a, #contact a, .yellow-btn .black-btn, blockquote a {
+nav a, footer nav a, #products a.product-button, #subscribe a, 
+#contact a, header ul li, .black-btn, blockquote a {
 	text-decoration: none;
 }
 
@@ -34,15 +42,18 @@ h2, h3, .secondary-label, blockquote p:first-child  {
 	text-transform: uppercase;
 }
 
-blockquote p:first-child, blockquote p:nth-child(2), blockquote a, #contact a:hover, #subscribe a:hover {
+blockquote p:first-child, blockquote p:nth-child(2), blockquote a, 
+#contact a:hover, #subscribe a:hover {
 	color: #fff;
 }
 
-header nav a, nav a, #products a.product-button, #callout a, #callout a:hover, #products a, #products a:hover, #about a, #contact a, #subscribe a, footer nav a {
+header nav a, nav a, #products a.product-button, #callout a, #callout a:hover, #products a, #products a:hover, 
+#about a, #contact a, #subscribe a, footer nav a {
 	color: #000;
 }
 
-.yellow-btn, nav a, #products a.product-button, #subscribe a, #contact a, input, form a, nav li, footer li, footer p, footer nav a, form p {
+.black-btn, header ul li, nav a, #products a.product-button, #subscribe a, #contact a, 
+input, form a, nav li, footer li, footer p, footer nav a, form p {
 	display: inline-block;
 }
 
@@ -59,7 +70,7 @@ h1, blockquote, blockquote p:first-child, blockquote p:nth-child(2), #subscribe 
 -------------------------------------------------------------- */
 
 h2 {
-	font: 2rem 'Oswald', sans-serif;
+	font: 400 2rem 'Oswald', sans-serif;
 }
 
 h3 {
@@ -105,18 +116,16 @@ footer p {
 	font-size: 0.5rem;
 }
 
+#our-location .col-1-2:first-child {
+	padding-right: 4rem;
+}
+
 /*--------------------------------------------------------------
 1.3 - BUTTONS
 -------------------------------------------------------------- */
 
 nav a, footer nav a, #products a.product-button, #subscribe a, #contact a {
 	font: 0.85rem "Courier", monospace;
-	border: 1px solid #000;
-	-moz-border-radius: 0.75rem;
-	-ms-border-radius: 0.75rem;
-	-o-border-radius: 0.75rem;
-	-webkit-border-radius: 0.75rem;
-	border-radius: 0.75rem;
 	min-width: 100px;
 	min-height: 22px;
 	margin-top: 5px;
@@ -143,34 +152,33 @@ blockquote a:hover {
 	font-weight: 700;
 }
 
-.yellow-btn {
+header ul li, footer ul:first-child li, .yellow-btn {
 	background: url(../img/btn.png) no-repeat center;
 	background-position: 0 0;
-	padding: 0 13px;
-	min-width: 128px;
-	min-height: 31px;
 	-moz-background-size: cover;
 	-ms-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	min-width: 128px;
+	min-height: 31px;
+	padding: 0 13px;
 }
 
-.yellow-btn:hover {
+header ul li:hover, footer ul:first-child li:hover, .yellow-btn:hover {
 	background-position: 0 -31px;
 }
 
 .black-btn {
 	background: url(../img/btn-bw.png) no-repeat center;
+	background-position: 0 0;
 	-moz-background-size: cover;
 	-ms-background-size: cover;
 	-o-background-size: cover;
 	-webkit-background-size: cover;
 	background-size: cover;
-	background-position: 0 0;
-	display: inline-block;
-	padding: 0 13px;
 	min-width: 128px;
 	min-height: 31px;
+	padding: 0 13px;
 }
 
 .black-btn:hover {
@@ -178,10 +186,10 @@ blockquote a:hover {
 }
 
 .sprite li a {
-	display: block;
 	background-position: 0 0;
-	height: 50px;
-	width: 54px;
+	display: block;
+	width: 35px;
+	height: 32px;
 }
 
 .sprite li:first-child a{
@@ -197,7 +205,7 @@ blockquote a:hover {
 }
 
 .sprite li a:hover {
-	background-position: 0 -49px;
+	background-position: 0 -32px;
 }
 
 /*--------------------------------------------------------------
@@ -218,6 +226,10 @@ input {
 	margin-bottom: 60px;
 	padding: 12px 20px;
 	width: 65%;
+}
+
+#subscribe input {
+	margin-top: 2rem;
 }
 
 .bg-dark-yellow input {
@@ -242,7 +254,6 @@ input {
 }
 
 textarea {
-  resize: none;
   border: 1px solid #000;
   -moz-border-radius: 0.25rem;
   -ms-border-radius: 0.25rem;
@@ -250,8 +261,8 @@ textarea {
   -webkit-border-radius: 0.25rem;
   border-radius: 0.25rem;
   height: 150px;
-  width: 100%;
   padding: 12px 20px;
+  resize: none;
 }
 
 /*--------------------------------------------------------------
@@ -283,15 +294,10 @@ ul {
 
 [class*='col-'] { /* Targets any class that beings with col- */
 	float: left;
-	padding-right: 20px; /* Use pixels because we never want the gutter to change size */
 	margin-bottom: 20px;
 }
 
-[class*='col-']:last-of-type {
-	padding-right: 0;
-}
-
-.col-1-2, .col-1-3 {
+[class*='col-']:last-of-type, .col-1-2, .col-1-3 {
 	padding-right: 0;
 }
 
@@ -299,7 +305,7 @@ ul {
 	margin-top: 1.75rem;
 }
 
-.col-1-4:last-child {
+[class*='col-'], .col-1-4:last-child {
 	padding-right: 20px;
 }
 
@@ -311,10 +317,6 @@ ul {
 .block-center {
 	float: none;
 	margin: 0 auto;
-}
-
-#hero .wrapper {
-	width: 100%;
 }
 
 #contact, footer {
@@ -338,16 +340,20 @@ ul {
 	flex: 1;
 }
 
+#callout {
+	margin-left: 5rem;
+}
+
+#hero .wrapper, img, textarea {
+	width: 100%;
+}
+
 /*--------------------------------------------------------------
 3.0 - MEDIA
 -------------------------------------------------------------- */
 
-img {
-	width: 100%;
-}
-
 #hero-img {
-	background: url(../img/hero-img.svg) 50% 100%/100% no-repeat;
+	background: url(../img/hero-img.jpg) 50% 100%/100% no-repeat;
 	-moz-background-size: cover;
 	-ms-background-size: cover;
 	-o-background-size: cover;
@@ -357,13 +363,9 @@ img {
 }
 
 #map {
-	height: 200px;
-	margin-top: 35px;
 	border: 1px solid #000;
-}
-
-footer img {
-	width: inherit;
+	height: 200px;
+	margin-top: 6rem;
 }
 
 /*--------------------------------------------------------------
@@ -544,7 +546,7 @@ h2 {
 	 line-height: 4rem;
  }
  
- h2, #about h2, #about p, #our-location p, ul, .col-1-8 {
+ h2, #about h2, #about p, #our-location p, form, ul, .col-1-3, .col-1-8, .col-1-9 {
 	 text-align: center;
  }
 
@@ -562,8 +564,8 @@ blockquote p:nth-child(2) {
 	font: 300 1rem 'Oswald', sans-serif;
 }
 
-#callout, #callout a {
-	font-size: 1.85rem;
+#callout, #callout a, #callout a:hover {
+	font-size: 2.10rem;
 }
 
 .secondary-label {
@@ -580,25 +582,26 @@ blockquote p:nth-child(2) {
 
 input {
   margin-bottom: 15px;
-  width: 100%;
 }
 
 textarea {
-  height: 150px;
-  width: 100%;
   padding: 12px 20px;
+  height: 150px;
 }
-	
+
+/*--------------------------------------------------------------
+1.5 - LISTS
+-------------------------------------------------------------- */
+
+ul {
+	margin-top: 0;
+}
+
 /*--------------------------------------------------------------
 2.1 - MAIN MENU
 -------------------------------------------------------------- */
 
-#fixed-nav {
-	position: static;
-	width: 100%;
-}
-
-#navbar-default {
+#fixed-nav, #navbar-default {
 	position: static;
 }
 	
@@ -610,7 +613,7 @@ textarea {
 	width: 85%;
 }
 
-.col-1-2, .col-1-3, .col-2-3 {
+.col-1-2, .col-1-3, .col-2-3, .col-4-5, #fixed-nav, input, textarea {
 	width: 100%;
 }
 
@@ -620,14 +623,13 @@ textarea {
 
 .col-1-5 {
 	width: 20%;
-	float: none;
 }
 
 .col-1-9 {
 	width: 25%;
 }
 
-nav {
+nav, .col-1-5, .col-1-9 {
 	float: none;
 }
 
@@ -640,22 +642,20 @@ nav, .col-1-5, .col-1-8 {
 	padding: 2rem 0;
 }
 
-.col-4-5 {
-	width: 100%;
-}
-
 #hero-img {
 	padding: 1rem 0 10rem;
 }
 
 .col-1-9 {
-	float: none;
 	margin: 1rem auto;
-	text-align: center;
 }
 
 #products .row:nth-of-type(2) header:nth-of-type(2) p {
 	margin: 0;
+}
+
+#callout {
+	margin: 2rem 0;
 }
 
 /*--------------------------------------------------------------
